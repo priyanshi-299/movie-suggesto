@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Movie Sections</title>
+</head>
+<body>
+    <header>
+        <nav id="nav">
+            <ul>
+                <li><a href="profile.html">profile</a></li>
+               
+                <li><button onclick="toggleFilters()">Filter Options</button>
+
+                    <div id="filter-options">
+                        <label for="language">Language:</label>
+                        <select id="language">
+                            <option value="all">All</option>
+                            <option value="english">English</option>
+                            <option value="hindi">hindi</option>
+                            <!-- Add more options as needed -->
+                        </select>
+                    
+                        <label for="imdbRating">IMDb Rating:</label>
+                        <select id="imdbRating">
+                            <option value="all">All</option>
+                            <option value="7">7+</option>
+                            <option value="8">8+</option>
+                            <!-- Add more options as needed -->
+                        </select>
+                    
+                        <label for="platform">Platform:</label>
+                        <select id="platform">
+                            <option value="all">All</option>
+                            <option value="netflix">Netflix</option>
+                            <option value="amazon">Amazon Prime</option>
+                            <option value="disney+hotstar">disney + hotstar</option>
+                            <!-- Add more options as needed -->
+                        </select>
+                    
+                        <button onclick="filterResults()">Apply Filters</button>
+                    </div>
+                    
+                    
+                    
+                    filters</li>
+                <li>search</li>
+                <li><a href="index.html.html">logout</a></li>
+            </ul>
+        </nav>
+        
+    </header><br><br>
+    
+    <span id="span"><h1>Movie Sections</h1></span>
+
+    <section class="movie-section" id="action">
+       
+        <h2><a href="action_movies.html">Action Movies</a></h2>
+        <!-- Add action movie content here -->
+    </section>
+
+    <section class="movie-section" id="adventure">
+        <h2><a href="adventure_movies.html">Adventure Movies</a></h2>
+        <!-- Add adventure movie content here -->
+    </section>
+
+    <section class="movie-section" id="comedy">
+        <h2><a href="comedy_movies.html">Comedy Movies</a></h2>
+        <!-- Add comedy movie content here -->
+    </section>
+
+    <section class="movie-section" id="horror">
+        <h2><a href="horror_movies.html">Horror Movies</a></h2>
+        <!-- Add horror movie content here -->
+    </section>
+
+    <section class="movie-section" id="mystery">
+        <h2><a href="mystery_movies.html">Mystery Movies</a></h2>
+        <!-- Add mystery movie content here -->
+    </section>
+
+    <section class="movie-section" id="romance">
+        <h2><a href="romance_movies.html">Romance Movies</a></h2>
+        <!-- Add romance movie content here -->
+    </section>
+
+    <section id='sci' class="movie-section" id="science-fiction">
+        <h2><a href="sci-fi_movies.html">Science Fiction Movies</a></h2>
+        <!-- Add science fiction movie content here -->
+    </section>
+
+    
+    <section class="movie-section" id="drama">
+        <h2><a href="drama_movies.html">Drama Movies</a></h2>
+        <!-- Add drama movie content here -->
+    </section>
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20200714/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            font-family: 'Arial', sans-serif;
+        }
+
+       
+        h1{
+            text-align: center;
+           
+           
+           background-color: rgb(0,0,0,0.5);
+           padding: 15px;
+        }
+
+        .movie-section {
+            display: inline-block;
+            width: 250px;
+            height: 200px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        a:active{
+            color: navy;
+        }
+        #sci{
+            position: relative;
+            top: 29px;
+        }
+        h2{
+            position: relative;
+            top: 70px;
+        }
+        #nav li{
+            float: left;
+            list-style: none;
+            margin-left:80px ;
+            font-size: 25px;
+            background-color: rgb(0,0,0,0.5);
+            margin: 10px;
+            padding: 5px;
+           
+        }
+       
+    </style>
+</body>
+<script>
+    function toggleFilters() {
+        var filterOptions = document.getElementById("filter-options");
+        filterOptions.style.display = (filterOptions.style.display === "block") ? "none" : "block";
+    }
+
+    function filterResults() {
+        var languageFilter = document.getElementById("language").value;
+        var imdbRatingFilter = document.getElementById("imdbRating").value;
+        var platformFilter = document.getElementById("platform").value;
+
+        // Implement your filtering logic here
+        // You can hide/show elements based on the selected filters
+
+        // For simplicity, let's just log the selected filters for now
+        console.log("Language:", languageFilter);
+        console.log("IMDb Rating:", imdbRatingFilter);
+        console.log("Platform:", platformFilter);
+    }
+</script>
+</html>
